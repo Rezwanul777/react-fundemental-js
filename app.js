@@ -38,3 +38,26 @@ for(i=0;i<numbers.length;i++){
    const output=multiply(5,6)
 
    7. // object--- three ways to access object
+
+   const student={
+      name:'prince',age:'40',id:'45'
+   }
+
+   const myAge='age'
+   console.log(student.name);// direct access by property
+   console.log(student['age']);// access via property name string
+   console.log(student[myAge]);// access via property name in a variable.
+
+
+   8. //Templet String
+
+    const myNumbers=[3,5,7,8,9]
+    const man={
+      name:'prince',age:'40',movies:['Poran','Din the day','DON']
+    }
+
+    const about=`My name is ${man.name} age is ${man.age} has got number ${myNumbers[2]} like movie ${man.movies[1]}` 
+
+    //console.log(about);
+
+    
