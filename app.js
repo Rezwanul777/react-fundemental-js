@@ -261,3 +261,19 @@ const hideUser=()=>console.log('I will learn Java')
 
 isActive ? displayUser() : hideUser()
 
+23.// object declaration shortcut
+
+const job='FrontEnd Developer'
+const status='Freelancer'
+
+const myPosition={
+   job:job,
+   status:status
+}
+//console.log( myPosition);
+
+// or=======
+
+const position1={job,status}
+//console.log(position1);
+
