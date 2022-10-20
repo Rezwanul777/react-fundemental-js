@@ -60,4 +60,43 @@ for(i=0;i<numbers.length;i++){
 
     //console.log(about);
 
+    9. // arrow function
+
+    const getFortyfive=()=>45  // without parameter
+    const addNumber=num=>num+45; // with one parameter
+    const isEven=x=>x%2==0   // find even number or u can find odd number just use !=0
+
+    const doMath=(num1,num2)=>{  // multiline arrow function return kore
+      const addNum=num1+num2;
+      const multiply=num1 * num2
+      const result=addNum + multiply
+      return result;
+    }
+
+    const result=doMath(5,5)
+    //console.log(result);
+   
+    const addThreeNum=(x,y,z)=>x+y+z; // multiparameter uses
+    //console.log(addThreeNum(4,5,6));
+
+    10. // Spread operator--- it just copy from older array or object
+
+    const newNumber=[34,56,89,90]
+    const copyNum=[...newNumber]
+    //console.log(copyNum);
+
+    // create a new array from an older array and add new element
+    const currentNum=[...newNumber,100]
+    //console.log(currentNum);
+
+
+    11. // knowledge of map, filter, find, forEach
+
+    const products=[
+  
+      { name:'python',price:9000,color:'green'},
+      { name:'Javascript',price:8000,color:'yellow'},
+       {name:'java',price:7000,color:'black'},
+       {name:'laravel',price:5000,color:'chayan'}
     
+    ]
