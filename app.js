@@ -44,9 +44,9 @@ for(i=0;i<numbers.length;i++){
    }
 
    const myAge='age'
-   console.log(student.name);// direct access by property
-   console.log(student['age']);// access via property name string
-   console.log(student[myAge]);// access via property name in a variable.
+   //console.log(student.name);// direct access by property
+   //console.log(student['age']);// access via property name string
+   //console.log(student[myAge]);// access via property name in a variable.
 
 
    8. //Templet String
@@ -100,3 +100,74 @@ for(i=0;i<numbers.length;i++){
        {name:'laravel',price:5000,color:'chayan'}
     
     ]
+    // use map function
+const names=products.map(product=>product.name) // select an item by map and returns an array
+//console.log(names);
+
+// use forEach function
+
+products.forEach(pd=>console.log(pd.price))// filter also iterate each element but does not return an array.
+// so we could not use any variable.
+
+// use filter -- it returns an array if fulfil the condition
+
+const coursePrice=products.filter(product=>product.price<8000)
+//console.log(coursePrice);
+
+const specificColor=products.filter(product=>product.color.includes('a'))
+//console.log(specificColor);
+
+// use find=== it gives first element if condition matching and gives an object
+// that is the difference from filter.
+
+const specialColor=products.find(product=>product.color.includes('a'))
+//console.log(specialColor);
+
+12.
+//array destructuring--- pls notify the serial no cause in array elements exit index wise.
+
+const arrNumbers=[56,78,90]
+const [x,y]=[56,78]
+//console.log(x);
+
+
+    const man1={
+      name:'prince',age:'40',movies:['Poran','Din the day','DON']
+    }
+
+    const[firstMovie,secondMovie]=man1.movies
+    //console.log(secondMovie);
+
+  13.  // object destructuring--- it does not maintain serial or index no.
+const employee={
+   name:'prince',
+   id:56,
+   computer:'laptop',
+   salary:50000,
+   programing:['java','javascript','python','c++'],
+   specification:{
+      height:5,
+      weight:62,
+      address:'Bogura',
+      watch:{
+         color:'gray',
+         price:6777,
+         // brand:''
+      }
+   }
+}
+
+const{computer,salary}=employee
+//console.log(salary);
+
+const{weight,address}=employee.specification // if u want destructure  a property from nested object
+//console.log(address);                        // then u have to do == object.property
+
+const [ist,second,third]=employee.programing
+//console.log(second);
+
+14.// use optional chaining---- it gets rid from error . if does not exist value or property it defines null
+
+const{brand}=employee?.specification?.watch
+//console.log(brand);
+
