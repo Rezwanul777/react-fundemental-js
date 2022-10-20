@@ -171,3 +171,93 @@ const [ist,second,third]=employee.programing
 const{brand}=employee?.specification?.watch
 //console.log(brand);
 
+15.//Find  keys, values of object--- it always return an array
+
+const man2={
+   name:'prince',age:'40',movies:['Poran','Din the day','DON']
+ }
+
+ const keys=Object.keys(man2)
+ //console.log(keys);
+ const values=Object.values(man2)
+ //console.log(values);
+
+const entries=Object.entries(man2) // it always return two dimensional  array
+//console.log(entries); 
+
+
+16. // Most important to Know
+    //  a) use for of in array like object
+    // b) loop in an object using for in
+     //    c) Mostly uses forEach in normal array
+
+17. // add or remove element from array of object
+
+const elements=[
+  
+   { name:'python',price:9000,color:'green'},
+   { name:'Javascript',price:8000,color:'yellow'},
+    {name:'java',price:7000,color:'black'},
+    {name:'laravel',price:5000,color:'chayan'}
+ 
+ ]
+ // add new element
+ const newElement={name:'PHP',price:4000,color:'red'}
+ // copy elements with spread operator and then add newElement
+ const newElements=[...elements,newElement]
+ //console.log(newElements);
+
+ // remove an item
+ // here remove item from array means create new array with specific item.
+ const removeItem=elements.filter(item=>item.name!=='java')
+
+ //console.log(removeItem);
+
+ 18. //truthy or falsy
+
+   // check truthy
+
+   let myNum=100;
+   if(myNum){   //--- it shows value is true or exits
+      myNum=myNum * 4
+   }else{
+      myNum=0;
+   }
+
+  // console.log(myNum);
+   //--- it shows negative or falsy
+  let myResult=100;
+   if(!myResult){   
+      myResult=myResult * 4
+   }else{
+      myResult=0;
+   }
+//console.log(myResult);
+
+19. //ternary operatorder
+
+let money=200;
+let food=money>100 ? 'burger' : 'cha biscuit kha'
+//console.log(food);
+
+20.//  number to string 
+
+const num1=89
+//console.log(num1);
+const numStr=num1+''  // to convert strimg
+//console.log(numStr);
+
+21. // convert string to number
+
+const input='56'
+const inputNum= +input
+
+//console.log(inputNum);
+
+22. // truthy or falsy
+const isActive=true;
+const displayUser=()=>console.log('I will learn Python')
+const hideUser=()=>console.log('I will learn Java')
+
+isActive ? displayUser() : hideUser()
+
