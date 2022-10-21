@@ -138,6 +138,20 @@ const [x,y]=[56,78]
     const[firstMovie,secondMovie]=man1.movies
     //console.log(secondMovie);
 
+    //  rest parameter for destructuring.
+let animal = {
+   name: "dog",
+   color: "brown",
+   age: 7,
+ };
+ let { age, ...rest } = animal; // here we use rest parameter for accecesing rest properties.
+ //console.log(rest);
+
+ // here we can alsi error handeling
+ let animal1=undefined;
+ const{age1,...rest1}=animal1 || {}
+ //console.log(rest1);
+
   13.  // object destructuring--- it does not maintain serial or index no.
 const employee={
    name:'prince',
@@ -277,3 +291,45 @@ const myPosition={
 const position1={job,status}
 //console.log(position1);
 
+
+// destructure task (advanced)
+
+const dreamGirl = [
+   {
+     dream1: {
+       name: "bbu",
+       height: "5.4",
+       family: [{ father: "rock", mother: "shila", sister: "chinki" }],
+       age: undefined,
+       contactInfo: [
+         {
+           facebook: {
+             link: "https://www.facebook.com/",
+             followers: "12545",
+             status: "single",
+             friendsList: [
+               { name: "rofik" },
+               { name: "jobbar" },
+               { name: "salam" },
+               { name: "borkot" },
+               undefined,
+             ],
+           },
+         },
+         { instagram: "https://www.instagram.com/" },
+         { twitter: "https://twitter.com/" },
+         { github: "https://github.com/" },
+         { phone: ["01254823212", "02152457"] },
+       ],
+     },
+   },
+ ];
+ 
+ //const friends=dreamGirl.dream1
+
+ //console.log(dreamGirl[0]?.dream1?.contactInfo[0]?.facebook?.friendsList);
+ // here we have to print friend element except undefine-----
+ const friends=dreamGirl[0]?.dream1?.contactInfo[0]?.facebook?.friendsList
+
+ const arrFriend=friends.filter(friend=>friend!==undefined)
+ //console.log(arrFriend);
